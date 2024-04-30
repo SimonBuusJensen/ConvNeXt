@@ -52,7 +52,7 @@ def get_args_parser():
     parser.add_argument('--batch_size', default=8, type=int,
                         help='Per GPU batch size')
     # parser.add_argument('--epochs', default=300, type=int)
-    parser.add_argument('--epochs', default=100, type=int)
+    parser.add_argument('--epochs', default=20, type=int)
     parser.add_argument('--update_freq', default=1, type=int,
                         help='gradient accumulation steps')
 
@@ -195,7 +195,7 @@ def get_args_parser():
                         help="Use PyTorch's AMP (Automatic Mixed Precision) or not")
 
     # Weights and Biases arguments
-    parser.add_argument('--enable_wandb', type=str2bool, default=False,
+    parser.add_argument('--enable_wandb', type=str2bool, default=True,
                         help="enable logging to Weights and Biases")
     parser.add_argument('--project', default='convnext', type=str,
                         help="The name of the W&B project where you're sending the new run.")
