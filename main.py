@@ -144,14 +144,14 @@ def get_args_parser():
     parser.add_argument('--model_prefix', default='', type=str)
 
     # Dataset parameters
-    parser.add_argument('--data_path', default='/datasets01/imagenet_full_size/061417/', type=str,
+    parser.add_argument('--data_path', default='/home/simon/data/BioVista/datasets/production_vs_natural_forest_mini_30m_squares/train/', type=str,
                         help='dataset path')
-    parser.add_argument('--eval_data_path', default=None, type=str,
+    parser.add_argument('--eval_data_path', default="/home/simon/data/BioVista/datasets/production_vs_natural_forest_mini_30m_squares/eval/", type=str,
                         help='dataset path for evaluation')
-    parser.add_argument('--nb_classes', default=1000, type=int,
+    parser.add_argument('--nb_classes', default=2, type=int,
                         help='number of the classification types')
     parser.add_argument('--imagenet_default_mean_and_std', type=str2bool, default=True)
-    parser.add_argument('--data_set', default='IMNET', choices=['CIFAR', 'IMNET', 'image_folder'],
+    parser.add_argument('--data_set', default='image_folder', choices=['CIFAR', 'IMNET', 'image_folder'],
                         type=str, help='ImageNet dataset path')
     parser.add_argument('--output_dir', default='',
                         help='path where to save, empty for no saving')
