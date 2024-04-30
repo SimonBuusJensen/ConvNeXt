@@ -48,9 +48,11 @@ def str2bool(v):
 
 def get_args_parser():
     parser = argparse.ArgumentParser('ConvNeXt training and evaluation script for image classification', add_help=False)
-    parser.add_argument('--batch_size', default=64, type=int,
+    # parser.add_argument('--batch_size', default=64, type=int,
+    parser.add_argument('--batch_size', default=8, type=int,
                         help='Per GPU batch size')
-    parser.add_argument('--epochs', default=300, type=int)
+    # parser.add_argument('--epochs', default=300, type=int)
+    parser.add_argument('--epochs', default=100, type=int)
     parser.add_argument('--update_freq', default=1, type=int,
                         help='gradient accumulation steps')
 
@@ -59,7 +61,8 @@ def get_args_parser():
                         help='Name of model to train')
     parser.add_argument('--drop_path', type=float, default=0, metavar='PCT',
                         help='Drop path rate (default: 0.0)')
-    parser.add_argument('--input_size', default=224, type=int,
+    # parser.add_argument('--input_size', default=224, type=int,
+    parser.add_argument('--input_size', default=600, type=int,
                         help='image input size')
     parser.add_argument('--layer_scale_init_value', default=1e-6, type=float,
                         help="Layer scale initial values")
