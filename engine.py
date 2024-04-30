@@ -159,7 +159,7 @@ def evaluate(data_loader, model, device, use_amp=False):
             output = model(images)
             loss = criterion(output, target)
 
-        acc1, _ = accuracy(output, target, topk=(1))
+        acc1, _ = accuracy(output, target, topk=(1, ))
         # acc1, acc5 = accuracy(output, target, topk=(1, 5))
 
         batch_size = images.shape[0]
